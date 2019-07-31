@@ -7,5 +7,76 @@
              x:Class="ClicarApp.App">
     <Application.Resources>
 
+
+        <ResourceDictionary>
+
+            
+            <Color x:Key="BaseGreen">#75AB40</Color>
+            <Color x:Key="BaseGrey">#59595C</Color>
+            <Color x:Key="BaseOrange">#E87B0E</Color>
+            
+            <OnPlatform 
+                x:TypeArguments="x:String" 
+                x:Key="BoldFontGotham">
+                <On 
+                    Platform="Android" 
+                    Value="GothamBold.ttf#Gotham" />
+                <On 
+                    Platform="iOS" 
+                    Value="GothamBold" />
+            </OnPlatform>
+            <OnPlatform 
+                x:TypeArguments="x:String" 
+                x:Key="LightFontGotham">
+                <On 
+                    Platform="Android" 
+                    Value="GothamLight.ttf#Gotham" />
+                <On 
+                    Platform="iOS" 
+                    Value="GothamLight" />
+            </OnPlatform>
+            <OnPlatform 
+                x:TypeArguments="x:String" 
+                x:Key="BookFontGotham">
+                <On 
+                    Platform="Android" 
+                    Value="GothamBook.ttf#Gotham" />
+                <On 
+                    Platform="iOS" 
+                    Value="GothamBook" />
+            </OnPlatform>
+            <OnPlatform 
+                x:TypeArguments="x:String" 
+                x:Key="MediumFontGotham">
+                <On 
+                    Platform="Android" 
+                    Value="GothamMedium.ttf#Gotham" />
+                <On 
+                    Platform="iOS" 
+                    Value="GothamMedium" />
+            </OnPlatform>
+
+
+        </ResourceDictionary>
+
+
+
+
+        <!--Definiciónd e estilos-->
+        <Style 
+            TargetType="NavigationPage">
+            <Setter 
+                Property="BarBackgroundColor" 
+                Value="#FFFFFF">
+            </Setter>
+            <Setter 
+                Property="TitleIcon" 
+                Value="clicar.png">
+            </Setter>
+        </Style>
+
+
+
+
     </Application.Resources>
 </Application>

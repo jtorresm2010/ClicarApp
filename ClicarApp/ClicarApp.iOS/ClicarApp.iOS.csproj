@@ -69,6 +69,10 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\Fonts\GothamBold.ttf" />
+    <BundleResource Include="Resources\Fonts\GothamLight.ttf" />
+    <BundleResource Include="Resources\Fonts\GothamBook.ttf" />
+    <BundleResource Include="Resources\Fonts\GothamMedium.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
