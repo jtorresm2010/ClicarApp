@@ -15,7 +15,7 @@
                 
                 
                 
-                    <!--Imagen-->
+                <!--Imagen-->
                 <StackLayout
                     VerticalOptions="Start"
                     HorizontalOptions="CenterAndExpand">
@@ -32,13 +32,15 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand">
                     <Label
+                        Margin="0,0,0,20"
                         HorizontalOptions="CenterAndExpand"
                         Text="Configuración"
                         FontSize="24"
                         TextColor="{StaticResource BaseGreen}"
                         FontFamily="{StaticResource MediumFontGotham}"/>
                         <StackLayout>
-                            <Label
+                        <Label
+                                Margin="0,0,0,10"
                                 Text="Seleccione de la lista presentada la Sucursal a configurar en la APP"
                                 FontSize="14"
                                 TextColor="{StaticResource BaseGrey}"
@@ -58,14 +60,23 @@
                 <StackLayout
                     Margin="0,0,0,30"
                     VerticalOptions="EndAndExpand">
-                    <local:CustomLabel
+
+                    <Frame
+                        Padding="15,4"
+                        HasShadow="False"
                         Margin="116,0"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center"
-                        HeightRequest="20"
-                        Text="Clicar-Movicenter"
-                        FontSize="11"
-                        FontFamily="{StaticResource MediumFontGotham}"/>
+                        CornerRadius="6"
+                        BackgroundColor="{StaticResource BaseGreen20}">
+                        <Label
+                            Text="Clicar-Movicenter"
+                            FontSize="11"
+                            TextColor="{StaticResource BaseGreen}"
+                            FontFamily="{StaticResource MediumFontGotham}"/>
+                    </Frame>
+                    
+                    
+                    
+                    
                     <StackLayout
                             Margin="36, 10">
                             <Label
@@ -74,30 +85,35 @@
                                 FontSize="10"
                                 TextColor="{StaticResource BaseGrey}"
                                 FontFamily="{StaticResource MediumFontGotham}"/>
-                            <Picker 
-                                Title="Sucursal"
-                                FontSize="10"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}">
-                                <Picker.Items>
-                                    <x:String>Clicar-Movistar</x:String>
-                                    <x:String>Clicar-Wom</x:String>
-                                    <x:String>Clicar-Claro</x:String>
-                                    <x:String>Clicar-Entel</x:String>
-                                    <x:String>Clicar-Virgin</x:String>
-                                    <x:String>Clicar-VTR</x:String>
-                                    <x:String>Clicar-Pacifico</x:String>
-                                    <x:String>Clicar-ATT</x:String>
-                                    <x:String>Clicar-Comcast</x:String>
-                                </Picker.Items>
-                            </Picker>
+                            <Frame
+                                HeightRequest="35">
+                                <Picker
+                                    Title="Clicar-Movistar"
+                                    FontSize="10"
+                                    TextColor="{StaticResource BaseGrey44}"
+                                    FontFamily="{StaticResource MediumFontGotham}">
+                                    <Picker.Items>
+                                        <x:String>Clicar-Movistar</x:String>
+                                        <x:String>Clicar-Wom</x:String>
+                                        <x:String>Clicar-Claro</x:String>
+                                        <x:String>Clicar-Entel</x:String>
+                                        <x:String>Clicar-Virgin</x:String>
+                                        <x:String>Clicar-VTR</x:String>
+                                        <x:String>Clicar-Pacifico</x:String>
+                                        <x:String>Clicar-ATT</x:String>
+                                        <x:String>Clicar-Comcast</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </Frame>
                     </StackLayout>
                     <StackLayout
                         Margin="56,0">
                         
                         <local:CustomButton
+                            
+                            Clicked="ContinueCommand"
                             BackgroundColor="{StaticResource BaseGreen}"
-                            Text="Iniciar sesión"
+                            Text="Ingresar a la Inspección"
                             FontSize="16"
                             FontFamily="{StaticResource MediumFontGotham}"
                             TextColor="White"

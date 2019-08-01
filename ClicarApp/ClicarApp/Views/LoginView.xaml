@@ -5,6 +5,7 @@
              xmlns:local="clr-namespace:ClicarApp.Customs" 
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="false"
              x:Class="ClicarApp.Views.LoginView">
     <ContentPage.Content>
         <ScrollView

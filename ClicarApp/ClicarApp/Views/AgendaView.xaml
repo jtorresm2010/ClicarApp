@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ClicarApp.Views.AgendaView">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Order="Primary"
+            Icon="sync_alt_solid"
+            Priority="1" />
+        <ToolbarItem 
+            Order="Primary"
+            Icon="user_times_solid"
+            Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+            <StackLayout
+            BackgroundColor="White">
+
+            <!--Titulo-->
+            <StackLayout
+                Margin="16,4,16,0"
+                Padding="10,12"
+                HeightRequest="50">
+                <Label
+                    VerticalOptions="CenterAndExpand"
+                    Text="Agenda"
+                    HorizontalOptions="StartAndExpand"
+                    FontSize="20"
+                    TextColor="{StaticResource BaseGreen}"
+                    FontFamily="{StaticResource MediumFontGotham}"/>
+
+
+            </StackLayout>
+
+            <!--Nombre del inspector-->
+            <Frame
+                Margin="16,0,16,3"
+                CornerRadius="10"
+                HasShadow="False"
+                Padding="10,12"
+                BackgroundColor="{StaticResource BaseGrey63}">
+                <StackLayout
+                    VerticalOptions="CenterAndExpand">
+                    <StackLayout
+                        Orientation="Horizontal">
+                        
+                        <Label
+                            TextColor="{StaticResource BaseGrey}"
+                            FontSize="13"
+                            FontFamily="{StaticResource BoldFontGotham}"
+                            Text="Inspector: "/>
+                        <Label
+                            TextColor="{StaticResource BaseGrey}"
+                            FontSize="13"
+                            FontFamily="{StaticResource BookFontGotham}"
+                            Text="Mario Quezada Andrade"/>
+                    </StackLayout>
+                    <Label
+                        TextColor="{StaticResource BaseGrey}"
+                        FontSize="10"
+                        FontFamily="{StaticResource BookFontGotham}"
+                        Text="08/06/2019 Clicar-Movicenter"/>
+                </StackLayout>
+                
+            </Frame>
+               
+            <!--Lista de vehiculos-->
+            <ListView
+                
+                HasUnevenRows="True"
+                SeparatorVisibility="None"
+                x:Name="AgendaListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame
+                                Margin="16,3"
+                                CornerRadius="10"
+                                Padding="0"
+                                HeightRequest="90">
+
+                                <Grid
+                                    VerticalOptions="CenterAndExpand"
+                                    Margin="36,0,20,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="60"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackLayout
+                                    Grid.Column="0">
+                                        <Label
+                                            Text="{Binding Modelo}"
+                                            HorizontalOptions="Start"
+                                            FontSize="13"
+                                            TextColor="{StaticResource DarkGrey}"
+                                            FontFamily="{StaticResource BoldFontGotham}"/>
+                                        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="0">
+                                            
+                                            <Label
+                                                Text="{Binding Marca}"
+                                                HorizontalOptions="Start"
+                                                FontSize="13"
+                                                TextColor="{StaticResource BaseGrey}"
+                                                FontFamily="{StaticResource BookFontGotham}"/>
+                                            <Label
+                                                Text=" - "
+                                                HorizontalOptions="Start"
+                                                FontSize="13"
+                                                TextColor="{StaticResource BaseGrey}"
+                                                FontFamily="{StaticResource BookFontGotham}"/>
+                                            <Label
+                                                Text="{Binding Color}"
+                                                HorizontalOptions="Start"
+                                                FontSize="13"
+                                                TextColor="{StaticResource BaseGrey}"
+                                                FontFamily="{StaticResource BookFontGotham}"/>
+                                            
+                                            
+                                            
+                                        </StackLayout>
+
+
+
+
+                                        
+                                        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="0">
+                                            <Label
+                                                Text="Hora de inicio: "
+                                                HorizontalOptions="Start"
+                                                FontSize="10"
+                                                TextColor="{StaticResource BaseGrey}"
+                                                FontFamily="{StaticResource MediumFontGotham}"/>
+                                            
+                                            <Label
+                                                Text="{Binding HoraInicio}"
+                                                HorizontalOptions="Start"
+                                                FontSize="10"
+                                                TextColor="{StaticResource BaseGrey}"
+                                                FontFamily="{StaticResource BookFontGotham}"/>
+                                            
+                                        </StackLayout>
+
+
+                                        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="0">
+                                            <Label
+                                                Text="Id:"
+                                                HorizontalOptions="Start"
+                                                FontSize="10"
+                                                TextColor="{StaticResource BaseOrange}"
+                                                FontFamily="{StaticResource BookFontGotham}"/>
+                                            <Label
+                                                Text="{Binding IDVehiculo}"
+                                                HorizontalOptions="Start"
+                                                FontSize="10"
+                                                TextColor="{StaticResource BaseOrange}"
+                                                FontFamily="{StaticResource MediumFontGotham}"/>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    
+
+
+                                    <StackLayout
+                                    Grid.Column="1"
+                                        IsVisible="{Binding Pendiente}">
+
+                                        <Frame
+                                        Padding="0"
+                                        HasShadow="False"
+                                        HeightRequest="16"
+                                        CornerRadius="8"
+                                        BackgroundColor="{StaticResource BaseOrange}">
+                                            <Label
+                                            Text="Pendiente"
+                                            FontSize="9"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                            TextColor="White"
+                                            FontFamily="{StaticResource MediumFontGotham}"/>
+                                        </Frame>
+                                    </StackLayout>
+                                    
+                                    <StackLayout
+                                    Grid.Column="1"
+                                        IsVisible="{Binding Finalizado}">
+
+                                        <Frame
+                                        Padding="0"
+                                        HasShadow="False"
+                                        HeightRequest="16"
+                                        CornerRadius="8"
+                                        BackgroundColor="{StaticResource BaseGreen}">
+                                            <Label
+                                            Text="Finalizado"
+                                            FontSize="9"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                            TextColor="White"
+                                            FontFamily="{StaticResource MediumFontGotham}"/>
+                                        </Frame>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
