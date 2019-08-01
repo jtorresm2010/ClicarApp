@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ClicarApp.Customs"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="false"
+             x:Class="ClicarApp.Views.ConfigView">
+    <ContentPage.Content>
+        <ScrollView
+            BackgroundColor="White">
+            <StackLayout
+                VerticalOptions="CenterAndExpand">
+                
+                
+                
+                    <!--Imagen-->
+                <StackLayout
+                    VerticalOptions="Start"
+                    HorizontalOptions="CenterAndExpand">
+                    <Image    
+                        Margin="100,0"
+                        Source="clicar_bajada.png" 
+                        VerticalOptions="Center">
+                    </Image>
+                </StackLayout>
+                
+                <!--Información-->
+                <StackLayout
+                    Margin="24"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Configuración"
+                        FontSize="24"
+                        TextColor="{StaticResource BaseGreen}"
+                        FontFamily="{StaticResource MediumFontGotham}"/>
+                        <StackLayout>
+                            <Label
+                                Text="Seleccione de la lista presentada la Sucursal a configurar en la APP"
+                                FontSize="14"
+                                TextColor="{StaticResource BaseGrey}"
+                                FontFamily="{StaticResource BookFontGotham}"/>
+                            
+                            <Label
+                                Text="Actualmente, la APP se encuentra activa para la Sucursal:"
+                                FontSize="14"
+                                TextColor="{StaticResource BaseGrey}"
+                                FontFamily="{StaticResource BookFontGotham}"/>
+                        </StackLayout>
+                    
+                    
+                </StackLayout>
+                
+                <!--Controles-->
+                <StackLayout
+                    Margin="0,0,0,30"
+                    VerticalOptions="EndAndExpand">
+                    <local:CustomLabel
+                        Margin="116,0"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        HeightRequest="20"
+                        Text="Clicar-Movicenter"
+                        FontSize="11"
+                        FontFamily="{StaticResource MediumFontGotham}"/>
+                    <StackLayout
+                            Margin="36, 10">
+                            <Label
+                                HorizontalOptions="Start"
+                                Text="Seleccione Sucursal"
+                                FontSize="10"
+                                TextColor="{StaticResource BaseGrey}"
+                                FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Picker 
+                                Title="Sucursal"
+                                FontSize="10"
+                                TextColor="{StaticResource BaseGrey}"
+                                FontFamily="{StaticResource MediumFontGotham}">
+                                <Picker.Items>
+                                    <x:String>Clicar-Movistar</x:String>
+                                    <x:String>Clicar-Wom</x:String>
+                                    <x:String>Clicar-Claro</x:String>
+                                    <x:String>Clicar-Entel</x:String>
+                                    <x:String>Clicar-Virgin</x:String>
+                                    <x:String>Clicar-VTR</x:String>
+                                    <x:String>Clicar-Pacifico</x:String>
+                                    <x:String>Clicar-ATT</x:String>
+                                    <x:String>Clicar-Comcast</x:String>
+                                </Picker.Items>
+                            </Picker>
+                    </StackLayout>
+                    <StackLayout
+                        Margin="56,0">
+                        
+                        <local:CustomButton
+                            BackgroundColor="{StaticResource BaseGreen}"
+                            Text="Iniciar sesión"
+                            FontSize="16"
+                            FontFamily="{StaticResource MediumFontGotham}"
+                            TextColor="White"
+                            HeightRequest="40"
+                            BorderRadius="20"/>
+                    
+                    </StackLayout>
+                    
+                </StackLayout>
+                
+                
+                
+                
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

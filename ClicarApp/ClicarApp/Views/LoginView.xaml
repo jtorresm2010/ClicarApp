@@ -7,58 +7,62 @@
              mc:Ignorable="d"
              x:Class="ClicarApp.Views.LoginView">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView
+            BackgroundColor="White">
             <StackLayout
                 VerticalOptions="CenterAndExpand">
-                <StackLayout VerticalOptions="Start"><!--Imagen y mensaje de bienvenida--> 
+
+                <!--Imagen y mensaje de bienvenida-->
+                <StackLayout 
+                    VerticalOptions="Start">
                     <StackLayout 
                         HorizontalOptions="CenterAndExpand">
-                            <Image    
+                        <Image    
                                 Source="clicar_bajada.png" 
                                 VerticalOptions="Center" 
-                                Margin="40,0">
-                            </Image>
+                                Margin="40,0"/>
+
                     </StackLayout>
                     <StackLayout
                         HorizontalOptions="CenterAndExpand"
                         Margin="0,10,0,20">
-                            <Label
+                        <Label
                                 Text="Bienvenidos,"
                                 HorizontalOptions="CenterAndExpand"
                                 FontSize="24"
                                 TextColor="{StaticResource BaseGreen}"
-                                FontFamily="{StaticResource BoldFontGotham}">
-                            </Label>
-                            <Label
+                                FontFamily="{StaticResource BoldFontGotham}"/>
+
+                        <Label
                                 Text="Iniciar sesión"
                                 HorizontalOptions="CenterAndExpand"
                                 FontSize="21"
                                 TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource LightFontGotham}">
-                            </Label>
+                                FontFamily="{StaticResource LightFontGotham}"/>
 
-                        
+
+
                     </StackLayout>
                 </StackLayout>
-                
-                
+
+                <!--Usuario, contraseña y recordatorio-->
                 <StackLayout 
-                    Margin="32,0,32,25"
-                    VerticalOptions="Center"><!--Usuario, contraseña y recordatorio-->
+                    Margin="32,0,32,25" 
+                    VerticalOptions="Center">
                     <Grid
                         HorizontalOptions="CenterAndExpand">
 
 
 
-                    <Image  
+                        <Image  
                             HorizontalOptions="Start"
                             WidthRequest="15"
-                        Margin="8"
+                            Margin="8"
                             Grid.Column="0"
                             Source="IngreseUsuario.png" 
-                            VerticalOptions="Center" >
-                    </Image>
-                    <local:CustomEntry 
+                            VerticalOptions="Center" />
+
+                        <local:CustomEntry 
                         
                         Grid.Column="0"
                         HeightRequest="36"
@@ -88,16 +92,14 @@
 
                 </StackLayout>
 
-
-
-
-
+                <!--Botones-->
                 <StackLayout
                     Margin="56.5,0"
-                    VerticalOptions="EndAndExpand"><!--Botones-->
+                    VerticalOptions="EndAndExpand">
 
                     
                     <local:CustomButton
+                        Clicked="LoginCommand"
                         BackgroundColor="{StaticResource BaseGreen}"
                         Text="Iniciar sesión"
                         FontSize="16"
@@ -117,6 +119,7 @@
                         BorderRadius="20"/>
 
                 </StackLayout>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
