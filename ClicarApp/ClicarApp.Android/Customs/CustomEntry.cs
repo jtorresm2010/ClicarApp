@@ -39,7 +39,7 @@ namespace ClicarApp.Droid.Customs
                 
                 Control.SetBackground(gradientDrawable);
                 Control.SetHintTextColor(Android.Graphics.Color.Argb(128, 117, 171, 64));
-                Control.SetPadding(80, Control.PaddingTop, Control.PaddingRight, Control.PaddingBottom);
+                Control.SetPadding(90, Control.PaddingTop, Control.PaddingRight, Control.PaddingBottom);
             }
         }
 

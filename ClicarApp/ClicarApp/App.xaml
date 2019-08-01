@@ -73,10 +73,6 @@
                 Property="BarBackgroundColor" 
                 Value="#FFFFFF">
             </Setter>
-            <Setter 
-                Property="TitleIcon" 
-                Value="clicar.png">
-            </Setter>
         </Style>
 
 

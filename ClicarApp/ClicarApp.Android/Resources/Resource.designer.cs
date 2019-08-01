@@ -7945,8 +7945,8 @@ namespace ClicarApp.Droid
 			// aapt resource value: 0x7f0d016d
 			public const int Animation_Design_BottomSheetDialog = 2131558765;
 			
-			// aapt resource value: 0x7f0d0201
-			public const int AppCompatDialogStyle = 2131558913;
+			// aapt resource value: 0x7f0d0202
+			public const int AppCompatDialogStyle = 2131558914;
 			
 			// aapt resource value: 0x7f0d009d
 			public const int Base_AlertDialog_AppCompat = 2131558557;
@@ -8520,6 +8520,9 @@ namespace ClicarApp.Droid
 			
 			// aapt resource value: 0x7f0d000e
 			public const int CardView_Light = 2131558414;
+			
+			// aapt resource value: 0x7f0d0201
+			public const int DrawerArrowStyle = 2131558913;
 			
 			// aapt resource value: 0x7f0d01ff
 			public const int MainTheme = 2131558911;

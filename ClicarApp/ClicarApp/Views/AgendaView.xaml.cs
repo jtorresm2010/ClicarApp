@@ -17,11 +17,12 @@ namespace ClicarApp.Views
         {
             InitializeComponent();
             LoadUserList();
-            NavigationPage.SetTitleIconImageSource(this, "clicar_bajada_toolbar.png");
+            //NavigationPage.SetTitleIconImageSource(this, "clicar_bajada_toolbar.png");
+            //NavigationPage.SetTitleView();
         }
 
 
-        void LoadUserList()/* Carga la lista de usuarios en el ListView */
+        void LoadUserList()/* Carga la lista de vehiculos en el ListView */
         {
 
             var listaVehiculos = new List<Vehiculo>();
@@ -71,13 +72,15 @@ namespace ClicarApp.Views
                 
             });
 
-
-
-
-
-
             AgendaListView.ItemsSource = listaVehiculos;
 
+        }
+
+        private async void AgendaItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var tapped = (Vehiculo)e.Item;
+            Console.WriteLine("Item tapped: "+tapped.Marca);
+            await Navigation.PushAsync(new DetalleInspView());
         }
 
     }
