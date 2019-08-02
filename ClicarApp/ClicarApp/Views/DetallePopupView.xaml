@@ -10,16 +10,76 @@
              x:Class="ClicarApp.Views.DetallePopupView">
 
         <Frame
-            Padding="0"
+            Padding="16,12"
             CornerRadius="10"
             BackgroundColor="White"
             Margin="16,120">
             
-            <StackLayout>
+            <StackLayout
+                Spacing="0">
+                
+                <!--Titulo-->
+                <StackLayout
+                    Margin="12">
+                    <Label
+                        Text="Ingrese VIN"
+                        HorizontalOptions="CenterAndExpand"
+                        FontSize="24"
+                        TextColor="{StaticResource BaseGreen}"
+                        FontFamily="{StaticResource MediumFontGotham}"/>
+                </StackLayout>
+
+                <!--Entry VIM-->
                 <StackLayout>
+                    <local:CustomEntry 
+                        Grid.Column="0"
+                        HeightRequest="36"
+                        BackgroundColor="Transparent" 
+                        Placeholder="Ingrese usuario" 
+                        TextColor="{StaticResource BaseGrey}" 
+                        FontSize="13" 
+                        FontFamily="{StaticResource BookFontGotham}"  />
+            </StackLayout>
+                
+                <!--Controles-->
+                <StackLayout
+                    Margin="0,16,0,24">
                     <Label
                         Text="Test"/>
+                        <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                    
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Test"/>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="Test"/>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Text="Test"/>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="Test"/>
+                        
+                </Grid>
+                    
+                    
                 </StackLayout>
+                
+                <!--Botones-->
                 <StackLayout 
                     HorizontalOptions="CenterAndExpand"
                     Padding="0"
