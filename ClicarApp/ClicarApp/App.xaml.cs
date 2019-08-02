@@ -11,7 +11,7 @@ namespace ClicarApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new AgendaView());
+            MainPage = new NavigationPage(new RechazarView());
             //MainPage = new NavigationPage(new DetalleInspView());
             //MainPage = new LoginView();
             //MainPage = new NavigationPage(new ConfigView());

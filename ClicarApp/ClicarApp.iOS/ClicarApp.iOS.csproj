@@ -64,6 +64,8 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Customs\CustomEntryGrayIOS.cs" />
+    <Compile Include="Customs\CustomEntryIOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -73,6 +75,8 @@
     <BundleResource Include="Resources\Fonts\GothamLight.ttf" />
     <BundleResource Include="Resources\Fonts\GothamBook.ttf" />
     <BundleResource Include="Resources\Fonts\GothamMedium.ttf" />
+    <BundleResource Include="Resources\Fonts\RobotoRegular.ttf" />
+    <BundleResource Include="Resources\Fonts\OpenSansRegular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

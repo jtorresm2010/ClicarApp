@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ClicarApp.Customs"
+             mc:Ignorable="d"
+             x:Class="ClicarApp.Views.RechazarView">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="33,25">
+                
+                <!--Titulo y num de inspeccion-->
+                <StackLayout>
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Rechazar la Inspección para la patente:"
+                        FontSize="20"
+                        TextColor="{StaticResource BaseGreen}"
+                        FontFamily="{StaticResource MediumFontGotham}"/>
+                    <Label
+                        Margin="35"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="JRGK85"
+                        FontSize="20"
+                        TextColor="{StaticResource BaseGrey}"
+                        FontFamily="{StaticResource MediumFontGotham}"/>
+                </StackLayout>                
+
+
+                <!--Selector-->
+                <StackLayout>
+                        <Label
+                            Text="Seleccione el motivo del rechazo"
+                            FontSize="10"
+                            FontFamily="{StaticResource BookFontGotham}"
+                            TextColor="{StaticResource BaseGrey}"/>
+                        <Frame
+                            Margin="8,0"
+                            Padding="0"
+                            HeightRequest="35">
+                            <Picker
+                                        Title="Clicar-Movistar"
+                                        FontSize="10"
+                                        TextColor="{StaticResource BaseGrey44}"
+                                        FontFamily="{StaticResource MediumFontGotham}">
+                                <Picker.Items>
+                                    <x:String>Clicar-Movistar</x:String>
+                                    <x:String>Clicar-Wom</x:String>
+                                    <x:String>Clicar-Claro</x:String>
+                                    <x:String>Clicar-Entel</x:String>
+                                    <x:String>Clicar-Virgin</x:String>
+                                    <x:String>Clicar-VTR</x:String>
+                                    <x:String>Clicar-Pacifico</x:String>
+                                    <x:String>Clicar-ATT</x:String>
+                                    <x:String>Clicar-Comcast</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </Frame>
+                    </StackLayout>
+
+                
+                <!--Botones-->
+                <StackLayout
+                    Margin="8"
+                        Spacing="0"
+                        Orientation="Horizontal">
+                    
+                        
+                        <local:CustomButton
+                            HorizontalOptions="StartAndExpand"
+                                        BackgroundColor="{StaticResource BaseGrey44}"
+                                        Text="Cancelar"
+                                        FontSize="16"
+                                        FontFamily="{StaticResource MediumFontGotham}"
+                                        TextColor="White"
+                                        HeightRequest="40"
+                                        WidthRequest="130"
+                                        BorderRadius="20"/>
+
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"/>
+
+
+                        <local:CustomButton
+                                            HorizontalOptions="EndAndExpand"
+                                            BackgroundColor="{StaticResource BaseOrange}"
+                                            Text="Rechazar"
+                                            FontSize="16"
+                                            FontFamily="{StaticResource MediumFontGotham}"
+                                            TextColor="White"
+                                            HeightRequest="40"
+                                            WidthRequest="130"
+                                            BorderRadius="20"/>
+
+                    </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

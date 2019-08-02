@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Customs\CustomButtonAndroid.cs" />
     <Compile Include="Customs\CustomEntry.cs" />
+    <Compile Include="Customs\CustomEntryGrayAndroid.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +75,8 @@
     <AndroidAsset Include="Assets\GothamLight.ttf" />
     <AndroidAsset Include="Assets\GothamBook.ttf" />
     <AndroidAsset Include="Assets\GothamMedium.ttf" />
+    <AndroidAsset Include="Assets\RobotoRegular.ttf" />
+    <AndroidAsset Include="Assets\OpenSansRegular.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

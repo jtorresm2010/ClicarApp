@@ -5,22 +5,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:ClicarApp.Customs"
-    mc:Ignorable="d"
+             xmlns:local="clr-namespace:ClicarApp.Customs"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             mc:Ignorable="d"
              x:Class="ClicarApp.Views.DetallePopupView">
 
         <Frame
-            Padding="16,12"
+            
+            Padding="16,0"
             CornerRadius="10"
+            VerticalOptions="Center"
+            HeightRequest="280"
             BackgroundColor="White"
-            Margin="16,120">
+            Margin="16">
             
             <StackLayout
-                Spacing="0">
+                VerticalOptions="CenterAndExpand"
+                Spacing="16">
                 
                 <!--Titulo-->
-                <StackLayout
-                    Margin="12">
+                <StackLayout>
                     <Label
                         Text="Ingrese VIN"
                         HorizontalOptions="CenterAndExpand"
@@ -31,50 +35,39 @@
 
                 <!--Entry VIM-->
                 <StackLayout>
-                    <local:CustomEntry 
+                    <local:CustomEntryGray
                         Grid.Column="0"
                         HeightRequest="36"
                         BackgroundColor="Transparent" 
-                        Placeholder="Ingrese usuario" 
+                        Placeholder="3589" 
                         TextColor="{StaticResource BaseGrey}" 
                         FontSize="13" 
                         FontFamily="{StaticResource BookFontGotham}"  />
-            </StackLayout>
+                </StackLayout>
                 
                 <!--Controles-->
-                <StackLayout
-                    Margin="0,16,0,24">
+                <StackLayout>
                     <Label
-                        Text="Test"/>
-                        <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                    
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Text="Test"/>
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Text="Test"/>
-                        <Label
-                            Grid.Row="1"
-                            Grid.Column="0"
-                            Text="Test"/>
-                        <Label
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            Text="Test"/>
+                        Text="Transmisión:"
+                        FontSize="14"
+                        FontFamily="{StaticResource BookFontGotham}"
+                        TextColor="{StaticResource BaseGrey}"/>
                         
-                </Grid>
+                        <input:RadioButtonGroupView
+                            Margin="16,5">
+                            <input:RadioButton
+                                CircleColor="{StaticResource BaseGrey}"
+                                FontFamily="{StaticResource BookFontGotham}"
+                                TextFontSize="12"
+                                Text="Automático" />
+                            <input:RadioButton
+                                CircleColor="{StaticResource BaseGrey}"
+                                FontFamily="{StaticResource BookFontGotham}"
+                                TextFontSize="12"
+                                Text="Mecánico" />
+                        </input:RadioButtonGroupView>
+
+                        
                     
                     
                 </StackLayout>
@@ -82,10 +75,10 @@
                 <!--Botones-->
                 <StackLayout 
                     HorizontalOptions="CenterAndExpand"
-                    Padding="0"
                     Orientation="Horizontal"
                     Spacing="24">
                     <local:CustomButton
+                                        Clicked="CancelarCommand"
                                         BackgroundColor="{StaticResource BaseGrey}"
                                         Text="Cancelar"
                                         FontSize="16"

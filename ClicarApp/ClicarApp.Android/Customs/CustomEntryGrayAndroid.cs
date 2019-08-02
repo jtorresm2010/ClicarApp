@@ -5,13 +5,13 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Android.Graphics.Drawables;
 
-[assembly: ExportRenderer(typeof(CustomEntry), typeof(CustomEntryAndroid))]
+[assembly: ExportRenderer(typeof(CustomEntryGray), typeof(CustomEntryGrayAndroid))]
 
 namespace ClicarApp.Droid.Customs
 {
-    class CustomEntryAndroid : EntryRenderer
+    class CustomEntryGrayAndroid : EntryRenderer
     {
-        public CustomEntryAndroid(Context context) : base(context)
+        public CustomEntryGrayAndroid(Context context) : base(context)
         {
         }
 
@@ -23,15 +23,17 @@ namespace ClicarApp.Droid.Customs
             {
                 var gradientDrawable = new GradientDrawable();
                 gradientDrawable.SetCornerRadius(20f);
-                gradientDrawable.SetStroke(3, Android.Graphics.Color.Argb(128, 117, 171, 64));
-                gradientDrawable.SetColor(Android.Graphics.Color.Transparent);
-                
-                
+                gradientDrawable.SetStroke(3, Android.Graphics.Color.Argb(51,168, 168, 168));
+                gradientDrawable.SetColor(Android.Graphics.Color.Rgb(248, 248, 248));
+
+
                 Control.SetBackground(gradientDrawable);
-                Control.SetHintTextColor(Android.Graphics.Color.Argb(128, 117, 171, 64));
-                Control.SetPadding(90, Control.PaddingTop, Control.PaddingRight, Control.PaddingBottom);
+                Control.SetHintTextColor(Android.Graphics.Color.Argb(153, 89, 89, 92));
+                Control.SetPadding(20, Control.PaddingTop, Control.PaddingRight, Control.PaddingBottom);
             }
         }
 
     }
+
+
 }

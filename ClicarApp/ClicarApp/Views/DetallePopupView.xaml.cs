@@ -1,4 +1,5 @@
 ﻿using Rg.Plugins.Popup.Pages;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,15 @@ namespace ClicarApp.Views
         public DetallePopupView()
         {
             InitializeComponent();
+        }
+
+        private async void CancelarCommand(object sender, EventArgs e)
+        {
+            var popup = PopupNavigation.Instance;
+            await popup.PopAsync();
+
+
+            //await PopupNavigation.PushAsync(new DetallePopupView());
         }
     }
 }
