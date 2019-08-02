@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,14 @@ namespace ClicarApp.Views
         {
             InitializeComponent();
             //NavigationPage.SetTitleIconImageSource(this, "clicar_bajada_toolbar.png");
+        }
+
+        private async void RechazarCommand(object sender, EventArgs e)
+        {
+            // Navigation.PopAsync();
+            var popup = PopupNavigation.Instance;
+            await popup.PushAsync(new DetallePopupView());
+            //await PopupNavigation.PushAsync(new DetallePopupView());
         }
     }
 }

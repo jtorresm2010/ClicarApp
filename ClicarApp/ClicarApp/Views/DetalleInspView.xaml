@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ClicarApp.Customs"
              mc:Ignorable="d"
              x:Class="ClicarApp.Views.DetalleInspView">
     
@@ -27,283 +28,278 @@
     
     
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+            <StackLayout>
+                
+                <!--Titulo y num de inspeccion-->
+                <StackLayout
+                    Margin="25">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Detalle de Inspección"
+                        FontSize="20"
+                        TextColor="{StaticResource BaseGreen}"
+                        FontFamily="{StaticResource MediumFontGotham}"/>
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="JRGK85"
+                        FontSize="16"
+                        TextColor="{StaticResource BaseGrey}"
+                        FontFamily="{StaticResource MediumFontGotham}"/>
+                </StackLayout>
             
-            <!--Titulo y num de inspeccion-->
+                <!--Detalles de inspeccion-->
+                <StackLayout
+                    Margin="34,0,34,10">
 
-            <StackLayout
-                Margin="25">
-                <Label
-                    HorizontalOptions="CenterAndExpand"
-                    Text="Detalle de Inspección"
-                    FontSize="20"
-                    TextColor="{StaticResource BaseGreen}"
-                    FontFamily="{StaticResource MediumFontGotham}"/>
-                <Label
-                    HorizontalOptions="CenterAndExpand"
-                    Text="JRGK85"
-                    FontSize="16"
-                    TextColor="{StaticResource BaseGrey}"
-                    FontFamily="{StaticResource MediumFontGotham}"/>
-            </StackLayout>
-            
-            <!--Detalles de inspeccion-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                    <!--N° de Inspección--> 
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="N° de Inspección"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="W-20190706-1-303"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+                   
+                    <!--Marca-->       
 
-        <StackLayout
-                Margin="34,2">
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Marca"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="PEUGEOT"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+                  
+                    <!--Modelo-->        
 
-                <!--N° de Inspección--> <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="N° de Inspección"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="W-20190706-1-303"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
-                <!--Marca-->            <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid
-                        HorizontalOptions="CenterAndExpand">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Marca"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="PEUGEOT"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
-                <!--Modelo-->           <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Modelo"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="208"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
-                <!--Color-->            <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Color"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Blanco"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
-                <!--Año-->              <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Año"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="2017"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
-                <!--Versión-->          <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Versión"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="208 ACTIVE PAC..."
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
-                <!--Kilometraje-->      <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Kilometraje"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Kilometraje"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
-                <!--Tipo-->             <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Tipo"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="CITI_CAR"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
-                <!--Nombre Cliente-->   <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Nombre Cliente"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Patricio Alarcon"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
-                <!--Rut Cliente-->      <StackLayout
-                    Orientation="Horizontal"
-                    Margin="0,5">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                                Grid.Column="0"
-                                HorizontalOptions="StartAndExpand"
-                                Text="Rut Cliente"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource MediumFontGotham}"/>
-                        <Label
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand"
-                                Text="12.968.185-5"
-                                FontSize="14"
-                                TextColor="{StaticResource BaseGrey}"
-                                FontFamily="{StaticResource BookFontGotham}"/>
-                    </Grid>
-                </StackLayout>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Modelo"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="208"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+                
+                    <!--Color-->        
+
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="3"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Color"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Blanco"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+                 
+                    <!--Año-->       
+
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="4"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Año"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="2017"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+                 
+                    <!--Versión-->        
+
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="5"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Versión"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="5"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="208 ACTIVE PAC..."
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+                  
+                    <!--Kilometraje-->    
+
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Kilometraje"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="6"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Kilometraje"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+                   
+                    <!--Tipo-->       
+
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="7"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Tipo"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="7"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="CITI_CAR"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+           
+                    <!--Nombre Cliente-->   
+
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="8"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Nombre Cliente"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="8"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Patricio Alarcon"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+                
+                    <!--Rut Cliente-->
+
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="9"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Rut Cliente"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource MediumFontGotham}"/>
+                            <Label
+                                    Margin="0,5"
+                                    Grid.Row="9"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="12.968.185-5"
+                                    FontSize="14"
+                                    TextColor="{StaticResource BaseGrey}"
+                                    FontFamily="{StaticResource BookFontGotham}"/>
+
+                        </Grid>
                        
 
-            </StackLayout>
+                </StackLayout>
             
-            <!--Botones-->
+                <!--Botones-->
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="CenterAndExpand">
+                <local:CustomButton
+                        Margin="6"
+                        BackgroundColor="{StaticResource BaseGreen}"
+                        Text="Inspeccionar"
+                        FontSize="16"
+                        FontFamily="{StaticResource MediumFontGotham}"
+                        TextColor="White"
+                        HeightRequest="40"
+                    WidthRequest="150"
+                        BorderRadius="20"/>
 
-            <StackLayout Orientation="Horizontal">
-                <Button/>
-                <Button/>
+                <local:CustomButton
+                        Clicked="RechazarCommand"
+                        Margin="6"
+                        BackgroundColor="{StaticResource BaseOrange}"
+                        Text="Rechazar"
+                        FontSize="16"
+                        FontFamily="{StaticResource MediumFontGotham}"
+                        TextColor="White"
+                        HeightRequest="40"
+                    WidthRequest="150"
+                        BorderRadius="20"/>
             </StackLayout>
             
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
