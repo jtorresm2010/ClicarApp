@@ -276,6 +276,8 @@
                 Orientation="Horizontal"
                 HorizontalOptions="CenterAndExpand">
                 <local:CustomButton
+                    
+                        Clicked="InspeccionarCommand"
                         Margin="6"
                         BackgroundColor="{StaticResource BaseGreen}"
                         Text="Inspeccionar"

@@ -26,5 +26,11 @@ namespace ClicarApp.Views
             await popup.PushAsync(new DetallePopupView());
             //await PopupNavigation.PushAsync(new DetallePopupView());
         }
+
+        private async void InspeccionarCommand(object sender, EventArgs e)
+        {
+            var popup = PopupNavigation.Instance;
+            await popup.PushAsync(new DetallePopupView());
+        }
     }
 }

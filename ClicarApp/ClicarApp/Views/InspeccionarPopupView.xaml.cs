@@ -12,9 +12,9 @@ using Xamarin.Forms.Xaml;
 namespace ClicarApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DetallePopupView : PopupPage
+    public partial class InspeccionarPopupView : PopupPage
     {
-        public DetallePopupView()
+        public InspeccionarPopupView()
         {
             InitializeComponent();
         }

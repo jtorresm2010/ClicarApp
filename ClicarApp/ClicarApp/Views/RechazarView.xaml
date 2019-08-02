@@ -6,6 +6,26 @@
              xmlns:local="clr-namespace:ClicarApp.Customs"
              mc:Ignorable="d"
              x:Class="ClicarApp.Views.RechazarView">
+
+    <NavigationPage.TitleView>
+        <StackLayout 
+            Margin="0"
+            Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+
+
+
+            <Image 
+                
+                Margin="0,0,68,0"
+                HorizontalOptions="CenterAndExpand"
+                HeightRequest="50"
+                Source="clicar_bajada_toolbar.png">
+            </Image>
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+
     <ContentPage.Content>
         <ScrollView>
             <StackLayout
@@ -30,7 +50,9 @@
 
 
                 <!--Selector-->
-                <StackLayout>
+                <StackLayout
+                    Margin="0,0,0,35"
+                    Spacing="10">
                         <Label
                             Text="Seleccione el motivo del rechazo"
                             FontSize="10"
@@ -41,12 +63,12 @@
                             Padding="0"
                             HeightRequest="35">
                             <Picker
-                                        Title="Clicar-Movistar"
-                                        FontSize="10"
-                                        TextColor="{StaticResource BaseGrey44}"
-                                        FontFamily="{StaticResource MediumFontGotham}">
+                                Title="Clicar-Movistar"
+                                FontSize="10"
+                                TextColor="{StaticResource BaseGrey44}"
+                                FontFamily="{StaticResource MediumFontGotham}">
                                 <Picker.Items>
-                                    <x:String>Clicar-Movistar</x:String>
+                                    <x:String>El Vehículo no coincide con los datos</x:String>
                                     <x:String>Clicar-Wom</x:String>
                                     <x:String>Clicar-Claro</x:String>
                                     <x:String>Clicar-Entel</x:String>
@@ -69,7 +91,8 @@
                     
                         
                         <local:CustomButton
-                            HorizontalOptions="StartAndExpand"
+                                        Clicked="CancelarCommand"
+                                        HorizontalOptions="StartAndExpand"
                                         BackgroundColor="{StaticResource BaseGrey44}"
                                         Text="Cancelar"
                                         FontSize="16"
@@ -79,20 +102,20 @@
                                         WidthRequest="130"
                                         BorderRadius="20"/>
 
-                    <StackLayout
-                        HorizontalOptions="FillAndExpand"/>
+                        <StackLayout HorizontalOptions="FillAndExpand"/>
 
 
                         <local:CustomButton
-                                            HorizontalOptions="EndAndExpand"
-                                            BackgroundColor="{StaticResource BaseOrange}"
-                                            Text="Rechazar"
-                                            FontSize="16"
-                                            FontFamily="{StaticResource MediumFontGotham}"
-                                            TextColor="White"
-                                            HeightRequest="40"
-                                            WidthRequest="130"
-                                            BorderRadius="20"/>
+                                        Clicked="RechazarCommand"
+                                        HorizontalOptions="EndAndExpand"
+                                        BackgroundColor="{StaticResource BaseOrange}"
+                                        Text="Rechazar"
+                                        FontSize="16"
+                                        FontFamily="{StaticResource MediumFontGotham}"
+                                        TextColor="White"
+                                        HeightRequest="40"
+                                        WidthRequest="130"
+                                        BorderRadius="20"/>
 
                     </StackLayout>
             </StackLayout>
